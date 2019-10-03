@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidekiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidekanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidebawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toStartOf="@+id/guidekanan"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guidekiri"
+        app:layout_constraintTop_toTopOf="@+id/guideatas"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/shipname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:hint="Ship Name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidekanan"
+        app:layout_constraintStart_toStartOf="@+id/guidekiri"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Type Ship"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidekanan"
+        app:layout_constraintStart_toStartOf="@+id/guidekiri"
+        app:layout_constraintTop_toBottomOf="@+id/shipname" />
+
+    <RadioGroup
+        android:id="@+id/grouptype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidekanan"
+        app:layout_constraintStart_toStartOf="@+id/guidekiri"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/cruiser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cruiser"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="455dp" />
+
+        <RadioButton
+            android:id="@+id/battleship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battleship"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="455dp" />
+
+        <RadioButton
+            android:id="@+id/destroyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destroyer"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@android:color/holo_orange_light"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="455dp" />
+
+        <RadioButton
+            android:id="@+id/submarine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submarine"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="455dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF6E40"
+        android:text="Toast It !"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guidebawah"
+        app:layout_constraintEnd_toStartOf="@+id/guidekanan"
+        app:layout_constraintStart_toStartOf="@+id/guidekiri"
+        app:layout_constraintTop_toBottomOf="@+id/grouptype" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
